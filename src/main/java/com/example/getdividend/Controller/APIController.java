@@ -17,10 +17,10 @@ public class APIController {
     @RequestMapping(value = "/APIPOST", method = RequestMethod.POST)
     public String get(@RequestBody ApiCode apiCode) throws IOException, InterruptedException {
 //        String str = "測試";
-        getUrlService gett = new getUrlService();
+        getUrlService getUrl = new getUrlService();
 //        String aa = gett.getUrl(str);
-        String aa = gett.getUrl(apiCode);
+        String response = getUrl.getUrl(apiCode);
 //        return apiCode.toString();
-        return aa;
+        return response;
     }
 }
